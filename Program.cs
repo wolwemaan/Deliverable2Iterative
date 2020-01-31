@@ -15,20 +15,7 @@ namespace Deliverable2Iterative
             Console.WriteLine("Enter an integer value between 1 and 100:");
 
             // Read the grade from standard input
-            int count = 0;
-
-            try
-            {
-
-                count = Convert.ToInt32(Console.ReadLine());
-            }
-            catch (Exception e)
-            {
-                // Extract information from this exception, and exit
-                if (e.Source != null)
-                    Console.WriteLine("Exception source: {0}", e.Source);
-                Environment.Exit(1);
-            }
+            int count = Convert.ToInt32(Console.ReadLine());
 
             // Exit with 1 failure exit code if the user ignore the bracket of accepted integers requested
             if (count < 1 || count > 100)
